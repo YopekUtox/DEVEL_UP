@@ -17,7 +17,7 @@ A simple script to earn exp for messages on servers 👾🦾
     **#2.** Type in terminal/console " pip install discord.py "
 
     **#3.** In script just select option 4 - install libary, automatic version 
-- **Config.json** - just keep it in the same directory with script.py   
+-  **Config.json** - just keep it in the same directory with script.py   
 
 🤚🤚🤚 Remember 🤚🤚🤚
 
