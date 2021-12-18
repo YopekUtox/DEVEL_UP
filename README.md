@@ -1,5 +1,5 @@
 # DEVEL_UP
-A simple script to earn exp for messages on servers 👾🦾
+A simple script to earn exp for messages on discord servers 👾🦾
 - Works on MEE6, ProBot bots and probably many others !
 
 ### How it works ? ⚙️
