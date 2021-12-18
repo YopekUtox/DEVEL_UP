@@ -5,6 +5,8 @@ A simple script to earn exp for messages on servers 👾🦾
 ### How it works ? ⚙️
 - The script sends a message (from your account) to the specified channel on the server and suddenly removes it. For this, it does not create spam and earns exp for the user. This was tested on the example of ProBot.
 
+![Logo](https://raw.githubusercontent.com/YopekUtox/DEVEL_UP/main/image_console.png)
+
 
 ### Required for operation 🦿
 - **Python 3.7** - at 95% I'm sure it will work on other versions 👌
