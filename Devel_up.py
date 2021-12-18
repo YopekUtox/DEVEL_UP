@@ -50,6 +50,9 @@ def menu():
             os.system("clear")
         menu()
 
+    if choice == "5":
+        sys.exit(1)
+
     if choice == "3":
         with open("config.json") as f: 
             print("\n")
