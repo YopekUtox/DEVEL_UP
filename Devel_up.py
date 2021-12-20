@@ -3,14 +3,16 @@ import time
 import json
 
 if sys.platform == "win32":
-    os.system("cls")
-
+    clear_terminal = "cls"
+    
 if sys.platform == "linux":
-    os.system("clear")
-
+    clear_terminal = "clear"
+    
 if sys.platform == "darwin":
     print("[ERROR] This OS is not supported !")    
     sys.exit(1)
+
+os.system(clear_terminal)
 
 def menu():
 
@@ -39,15 +41,12 @@ def menu():
         print("\n\033[33m[\033[0mINFO\033[33m]\033[0m Install modules please wait ...")
         time.sleep(3)
         try:
-            os.system("pip install discord.py")
+            os.system("pip install discord.py") 
         except:
             os.system("pip3 install discord.py")
 
         input("\033[33m[\033[0mINFO\033[33m]\033[0m Installation was successful, press ENTER to back")
-        if sys.platform == "win32":
-            os.system("cls")
-        if sys.platform == "linux":
-            os.system("clear")
+        os.system(clear_terminal)
         menu()
 
     if choice == "5":
@@ -66,10 +65,7 @@ def menu():
             json.dump(data, open("config.json", "w"), indent = 4)
             print("\n\033[33m[\033[0mINFO\033[33m]\033[0m Config is set now ...")
             time.sleep(3)
-            if sys.platform == "win32":
-                os.system("cls")
-            if sys.platform == "linux":
-                os.system("clear")
+            os.system(clear_terminal)
             menu()    
 
     if choice == "2":     
@@ -77,10 +73,7 @@ def menu():
             print("\n\033[94mCONFIG: \033[00m")
             print(json.dumps(json.load(read_config), indent=4))
             input("\n\033[33m[\033[0mINFO\033[33m]\033[0m Press enter to back")
-            if sys.platform == "win32":
-                os.system("cls")
-            if sys.platform == "linux":
-                os.system("clear")
+            os.system(clear_terminal)
             menu()    
 
     if choice == "1":    
@@ -125,16 +118,14 @@ def menu():
                             if up_cout == int(cout):  
                                 print(f"\033[33m[\033[0mINFO\033[33m]\033[0m Grind exp is completed, successively sended {cout} messages")
                                 input("\n\033[33m[\033[0mINFO\033[33m]\033[0m Press enter to back")
-                                if sys.platform == "win32":
-                                    os.system("cls")
-                                if sys.platform == "linux":
-                                    os.system("clear")
+                                os.system(clear_terminal)
                                 menu()   
 
                             
                         except Exception as e:
                             print("\n\033[91m[\033[0mWARN\033[91m]\033[0m Someting is wrong. Please check this in discord \033[91m!!!\033[00m\n")
                             input("\n\033[33m[\033[0mINFO\033[33m]\033[0m Press enter to back")
+                            os.system(clear_terminal)
                             menu()
 
                 exp.run(token, bot=False)
@@ -168,32 +159,24 @@ def menu():
                         if up_cout == int(cout):  
                             print(f"\033[33m[\033[0mINFO\033[33m]\033[0m Grind exp is completed, successively sended {cout} messages")
                             input("\n\033[33m[\033[0mINFO\033[33m]\033[0m Press enter to back")
-                            if sys.platform == "win32":
-                                os.system("cls")
-                            if sys.platform == "linux":
-                                os.system("clear")
+                            os.system(clear_terminal)
                             menu()   
 
                     except Exception as e:
                         print("\n\033[91m[\033[0mWARN\033[91m]\033[0m Someting is wrong. Please check this in discord \033[91m!!!\033[00m\n")
                         input("\n\033[33m[\033[0mINFO\033[33m]\033[0m Press enter to back")
+                        os.system(clear_terminal)
                         menu()
 
             exp.run(token, bot=False)    
 
         if choice_start == "3": 
-            if sys.platform == "win32":
-                os.system("cls")
-            if sys.platform == "linux":
-                os.system("clear")    
+            os.system(clear_terminal)   
             menu()  
     else:
         print("\n\033[91m[\033[0mWARN\033[91m]\033[0m Does not exist\033[91m !!!\033[00m\n")
         time.sleep(3)
-        if sys.platform == "win32":
-            os.system("cls")
-        if sys.platform == "linux":
-            os.system("clear")
+        os.system(clear_terminal)
         menu()
 
 menu()
